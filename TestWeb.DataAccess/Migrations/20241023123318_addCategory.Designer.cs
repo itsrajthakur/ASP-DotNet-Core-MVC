@@ -8,7 +8,7 @@ using TestWeb.DataAccess.Data;
 
 #nullable disable
 
-namespace TestWeb.Migrations
+namespace TestWeb.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20241023123318_addCategory")]

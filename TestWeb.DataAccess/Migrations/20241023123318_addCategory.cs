@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace TestWeb.Migrations
+namespace TestWeb.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class addCategory : Migration

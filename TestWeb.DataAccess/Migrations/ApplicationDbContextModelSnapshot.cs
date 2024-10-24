@@ -7,7 +7,7 @@ using TestWeb.DataAccess.Data;
 
 #nullable disable
 
-namespace TestWeb.Migrations
+namespace TestWeb.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
