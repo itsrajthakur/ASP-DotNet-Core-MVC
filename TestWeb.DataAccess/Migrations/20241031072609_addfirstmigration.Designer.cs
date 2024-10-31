@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestWeb.DataAccess.Data;
 
@@ -10,9 +11,11 @@ using TestWeb.DataAccess.Data;
 namespace TestWeb.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241031072609_addfirstmigration")]
+    partial class addfirstmigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -85,10 +88,6 @@ namespace TestWeb.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("ListPrice")
                         .HasColumnType("float");
 
@@ -119,7 +118,6 @@ namespace TestWeb.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "Praesent vitae sodales libero.",
                             ISBN = "SWD6545654",
-                            ImageUrl = "",
                             ListPrice = 99.0,
                             Price = 90.0,
                             Price100 = 80.0,
@@ -133,7 +131,6 @@ namespace TestWeb.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "The story of a man.",
                             ISBN = "SWD9533654",
-                            ImageUrl = "",
                             ListPrice = 78.0,
                             Price = 70.0,
                             Price100 = 55.0,
@@ -147,7 +144,6 @@ namespace TestWeb.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "Story of IAS Ofacer.",
                             ISBN = "SWD8833654",
-                            ImageUrl = "",
                             ListPrice = 44.0,
                             Price = 54.0,
                             Price100 = 33.0,
