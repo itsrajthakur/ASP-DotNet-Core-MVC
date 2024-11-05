@@ -7,7 +7,7 @@
 namespace TestWeb.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class addfirstmigration : Migration
+    public partial class UpdateMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -40,7 +40,8 @@ namespace TestWeb.DataAccess.Migrations
                     Price = table.Column<double>(type: "float", nullable: false),
                     Price50 = table.Column<double>(type: "float", nullable: false),
                     Price100 = table.Column<double>(type: "float", nullable: false),
-                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                    CategoryId = table.Column<int>(type: "int", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -65,12 +66,12 @@ namespace TestWeb.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "Id", "Author", "CategoryId", "Description", "ISBN", "ListPrice", "Price", "Price100", "Price50", "Title" },
+                columns: new[] { "Id", "Author", "CategoryId", "Description", "ISBN", "ImageUrl", "ListPrice", "Price", "Price100", "Price50", "Title" },
                 values: new object[,]
                 {
-                    { 1, "Billy Spark", 1, "Praesent vitae sodales libero.", "SWD6545654", 99.0, 90.0, 80.0, 85.0, "Fortune of Time" },
-                    { 2, "Tony Star", 3, "The story of a man.", "SWD9533654", 78.0, 70.0, 55.0, 65.0, "Dark Hours" },
-                    { 3, "jhon amait", 2, "Story of IAS Ofacer.", "SWD8833654", 44.0, 54.0, 33.0, 66.0, "12th Fail" }
+                    { 1, "Billy Spark", 1, "Praesent vitae sodales libero.", "SWD6545654", "", 99.0, 90.0, 80.0, 85.0, "Fortune of Time" },
+                    { 2, "Tony Star", 3, "The story of a man.", "SWD9533654", "", 78.0, 70.0, 55.0, 65.0, "Dark Hours" },
+                    { 3, "jhon amait", 2, "Story of IAS Ofacer.", "SWD8833654", "", 44.0, 54.0, 33.0, 66.0, "12th Fail" }
                 });
 
             migrationBuilder.CreateIndex(

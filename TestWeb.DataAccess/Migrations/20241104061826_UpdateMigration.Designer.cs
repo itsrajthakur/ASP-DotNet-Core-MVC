@@ -11,8 +11,8 @@ using TestWeb.DataAccess.Data;
 namespace TestWeb.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241031072609_addfirstmigration")]
-    partial class addfirstmigration
+    [Migration("20241104061826_UpdateMigration")]
+    partial class UpdateMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -88,6 +88,10 @@ namespace TestWeb.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("ListPrice")
                         .HasColumnType("float");
 
@@ -118,6 +122,7 @@ namespace TestWeb.DataAccess.Migrations
                             CategoryId = 1,
                             Description = "Praesent vitae sodales libero.",
                             ISBN = "SWD6545654",
+                            ImageUrl = "",
                             ListPrice = 99.0,
                             Price = 90.0,
                             Price100 = 80.0,
@@ -131,6 +136,7 @@ namespace TestWeb.DataAccess.Migrations
                             CategoryId = 3,
                             Description = "The story of a man.",
                             ISBN = "SWD9533654",
+                            ImageUrl = "",
                             ListPrice = 78.0,
                             Price = 70.0,
                             Price100 = 55.0,
@@ -144,6 +150,7 @@ namespace TestWeb.DataAccess.Migrations
                             CategoryId = 2,
                             Description = "Story of IAS Ofacer.",
                             ISBN = "SWD8833654",
+                            ImageUrl = "",
                             ListPrice = 44.0,
                             Price = 54.0,
                             Price100 = 33.0,

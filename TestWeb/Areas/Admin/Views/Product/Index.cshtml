@@ -12,61 +12,26 @@
         <div class="row pb-3">
             <div class="col-6"></div>
             <div class="col-6 text-end">
-                <a asp-controller="Product" asp-action="Create" class="btn btn-primary">
+                <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
                     <i class="bi bi-plus-circle"></i> Create New Product
                 </a>
             </div>
         </div>
-        <table class="table table-bordered table-striped table-hover">
+        <table id="example" class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Description</th>
                     <th>ISBN</th>
                     <th>Author</th>
-                    <th>ListPrice</th>
                     <th>Price</th>
-                    <th>Price50</th>
-                    <th>Price100</th>
+                    <th>Category</th>
+                    <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-                @foreach (var obj in Model)
-                {
-                    <tr>
-                        <th>
-                            @obj.Title
-                        </th>
-                        <th>
-                            @obj.Description
-                        </th>
-                        <th>
-                            @obj.ISBN
-                        </th>
-                        <th>
-                            @obj.Author
-                        </th>
-                        <th>
-                            @obj.ListPrice
-                        </th>
-                        <th>
-                            @obj.Price
-                        </th>
-                        <th>
-                            @obj.Price50
-                        </th>
-                        <th>
-                            @obj.Price100
-                        </th>
-                        <th>
-                            <div class="container btn-group" role="group">
-                                <a asp-controller="Product" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary mx-2"><i class="bi bi-pencil-square"></i></a>
-                                <a asp-controller="Product" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger"><i class="bi bi-trash3"></i></a>
-                            </div>
-                        </th>
-                    </tr>
-                }
-            </tbody>
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/Product.js"></script>
+}
