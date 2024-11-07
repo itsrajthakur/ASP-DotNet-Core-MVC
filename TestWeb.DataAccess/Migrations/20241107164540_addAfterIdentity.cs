@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TestWeb.DataAccess.Migrations
 {
     /// <inheritdoc />
-    public partial class updateAfterIdentity : Migration
+    public partial class addAfterIdentity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -12,8 +12,8 @@ using TestWeb.DataAccess.Data;
 namespace TestWeb.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241107131351_updateAfterIdentity")]
-    partial class updateAfterIdentity
+    [Migration("20241107164540_addAfterIdentity")]
+    partial class addAfterIdentity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
