@@ -80,14 +80,15 @@ namespace TestWeb.Areas.Admin.Controllers
                 if (productVM.Product.Id == 0)
                 {
                     _unitOfWork.Product.Add(productVM.Product);
+                TempData["success"] = "Product created successfully";
                 }
                 else
                 {
                     _unitOfWork.Product.Update(productVM.Product);
+                TempData["success"] = "Product Updated successfully";
                 }
 
                 _unitOfWork.Save();
-                TempData["success"] = "Product created successfully";
                 return RedirectToAction("Index");
             }
             else

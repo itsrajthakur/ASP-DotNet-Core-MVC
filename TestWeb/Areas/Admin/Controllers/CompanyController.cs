@@ -45,14 +45,15 @@ namespace TestWeb.Areas.Admin.Controllers
                 if (companyObj.Id == 0)
                 {
                     _unitOfWork.Company.Add(companyObj);
+                TempData["success"] = "Company Created successfully";
                 }
                 else
                 {
                     _unitOfWork.Company.Update(companyObj);
+                TempData["success"] = "Company Updated successfully";
                 }
 
                 _unitOfWork.Save();
-                TempData["success"] = "Company created successfully";
                 return RedirectToAction("Index");
             }
             else
