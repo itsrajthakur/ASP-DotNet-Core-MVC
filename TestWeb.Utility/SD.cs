@@ -24,5 +24,7 @@ namespace TestWeb.Utility
         public const string PayemntStatusApproved = "Approved";
         public const string PayemntStatusDelayedPayment = "ApprovedForDelayedPayment";
         public const string PayemntStatusRejected = "Rejected";
+
+        public const string SessionCart = "SessionShoppingCart";
     }
 }
